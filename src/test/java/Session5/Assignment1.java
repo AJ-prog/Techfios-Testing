@@ -7,20 +7,25 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
 
-public class Test1Push {
+//Automate the following test case:
+//Scenario: Users will be able to add deposit
+//1: Open Browser and go to site http://www.techfios.com/ibilling/?ng=admin/ 
+//2. Enter userName: demo@techfios.com 
+//3. Enter password: abc123
+//4. Click login button
+//5. Click on Transactions button
+//6. Click on New Deposit button 
+//7. Click on Open An Account drop down to expand it
+//8. Click on any account name
+//9. Type any description
+//10. Type any amount
+//11. Click on submit button
+//Visually check to make sure the deposit posted
+//validation
 
-	WebDriver driver;
-	@BeforeMethod
-	public void launchBrowser() {
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.get("http://www.techfios.com/ibilling/?ng=admin/");
-	}
-	
+
+public class Assignment1 {
 
 	@Test
 	public void userAbleToMakeDeposit () throws InterruptedException  {
@@ -75,5 +80,6 @@ public class Test1Push {
 		
 	   driver.close();
 	   driver.quit();
-	}	
+		
+	}
 }
